@@ -55,6 +55,10 @@ uv run python seed_db.py
 ### 5. Запуск приложения
 
 ```bash
+alembic upgrade head
+```
+
+```bash
 uv run uvicorn main:app --reload
 ```
 
