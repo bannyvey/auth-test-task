@@ -70,30 +70,27 @@ API документация (Swagger): **http://127.0.0.1:8000/docs**
 
 Создайте файл `.env` со следующими переменными:
 
-```env
-# Database
-POSTGRES_USER=your_user
-POSTGRES_PASSWORD=your_password
-POSTGRES_DB=auth_db
+```env 
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
-POSTGRES_HOST_PORT=5432
+POSTGRES_HOST_PORT=5429
+POSTGRES_PASSWORD=callofduty
+POSTGRES_USER=postgres
+POSTGRES_DB=auth
 
-# Redis
-REDIS_HOST=localhost
-REDIS_HOST_PORT=6377
-
-# JWT
-JWT_SECRET_KEY=your-super-secret-key-change-this-in-production
+# JWT settings
+JWT_SECRET_KEY=your-super-mega-puper-key-123-awdawdc
 JWT_ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=15
-REFRESH_TOKEN_EXPIRE_DAYS=7
+JWT_ISSUER=AuthAuthAuth
+JWT_AUDIENCE=AuthAuth
 
-# Application
-APP_NAME=Auth Service
-APP_VERSION=1.0.0
-DEBUG=True
-```
+
+
+REDIS_HOST=127.0.0.1
+REDIS_PORT=6379
+REDIS_HOST_PORT=6377
+REDIS_PASSWORD=redis
+REDIS_CACHE_TTL=300
 
 ## Как работает аутентификация
 
